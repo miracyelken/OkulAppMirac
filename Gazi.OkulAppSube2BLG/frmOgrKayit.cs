@@ -57,22 +57,43 @@ namespace Gazi.OkulAppSube2BLG
 
         private void btnBul_Click(object sender, EventArgs e)
         {
-            var frm = new frmOgrBul(this);
-            frm.Show();
-            btnSil.Enabled = true;
-            btnGuncelle.Enabled = true;
+            try
+            {
+                var frm = new frmOgrBul(this);
+                frm.Show();
+                btnSil.Enabled = true;
+                btnGuncelle.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Bir hata oluştu...");
+            }
         }
 
         private void btnSil_Click(object sender, EventArgs e)
         {
-            var obl = new OgrenciBL();
-            MessageBox.Show(obl.OgrenciSil(Ogrenciid) ? "Silme Başarılı" : "Başarısız!");
+            try
+            {
+                var obl = new OgrenciBL();
+                MessageBox.Show(obl.OgrenciSil(Ogrenciid) ? "Silme Başarılı" : "Başarısız!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Bir hata oluştu...");
+            }
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            var obl = new OgrenciBL();
-            MessageBox.Show(obl.OgrenciGuncelle(new Ogrenci { Ad = txtAd.Text.Trim(), Soyad = txtSoyad.Text.Trim(), Numara = txtNumara.Text.Trim(), Ogrenciid = Ogrenciid }) ? "Güncelleme Başarılı" : "Güncelleme Başarısız!");
+            try
+            {
+                var obl = new OgrenciBL();
+                MessageBox.Show(obl.OgrenciGuncelle(new Ogrenci { Ad = txtAd.Text.Trim(), Soyad = txtSoyad.Text.Trim(), Numara = txtNumara.Text.Trim(), Ogrenciid = Ogrenciid }) ? "Güncelleme Başarılı" : "Güncelleme Başarısız!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Bir hata oluştu...");
+            }
         }
     }
 
