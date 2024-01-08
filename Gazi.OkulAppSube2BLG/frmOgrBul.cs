@@ -33,6 +33,8 @@ namespace Gazi.OkulAppSube2BLG
                 frm.txtSoyad.Text=ogr.Soyad;
                 frm.txtNumara.Text = ogr.Numara;
                 frm.Ogrenciid = ogr.Ogrenciid;
+                frm.btnSil.Enabled = true;
+                frm.btnGuncelle.Enabled = true;
             }
             else
             {

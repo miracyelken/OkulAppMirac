@@ -61,8 +61,6 @@ namespace Gazi.OkulAppSube2BLG
             {
                 var frm = new frmOgrBul(this);
                 frm.Show();
-                btnSil.Enabled = true;
-                btnGuncelle.Enabled = true;
             }
             catch (Exception ex)
             {
