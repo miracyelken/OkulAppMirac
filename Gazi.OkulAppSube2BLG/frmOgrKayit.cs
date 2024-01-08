@@ -79,6 +79,9 @@ namespace Gazi.OkulAppSube2BLG
             {
                 MessageBox.Show("Bir hata oluştu...");
             }
+            this.txtAd.Text = "";
+            this.txtSoyad.Text = "";
+            this.txtNumara.Text = "";
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)
