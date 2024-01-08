@@ -87,9 +87,9 @@ namespace OkulApp.BLL//Bussiness Logic Layer
             try
             {
                 SqlParameter[] p = { new SqlParameter("@Ad",ogr.Ad),
-            new SqlParameter("@Soyad",ogr.Soyad),
-            new SqlParameter("@Numara",ogr.Numara),
-            new SqlParameter("@OgrenciId",ogr.Ogrenciid)};
+                new SqlParameter("@Soyad",ogr.Soyad),
+                new SqlParameter("@Numara",ogr.Numara),
+                new SqlParameter("@OgrenciId",ogr.Ogrenciid)};
 
                 Helper hlp = new Helper();
                 return hlp.ExecuteNonQuery("Update tblOgrenciler set Ad=@Ad,Soyad=@Soyad,Numara=@Numara where OgrenciId=@OgrenciId", p) > 0;
@@ -100,7 +100,5 @@ namespace OkulApp.BLL//Bussiness Logic Layer
                 throw;
             }
         }
-
-
     }
 }
